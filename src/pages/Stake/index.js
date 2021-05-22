@@ -77,7 +77,7 @@ export default function Stake() {
               <div className="totalRevenueContainer">
                 <div className="title">Total Staked</div>
                 <div className="content">
-                  {universalData.totalStaked / 1000000 + 4174758}
+                  {universalData.totalStaked / 1000000}
                 </div>
               </div>
 
