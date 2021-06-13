@@ -50,10 +50,7 @@ export default function StakeForm({ contract, tokenContract, address }) {
 
         const timestamp = window.tronWeb.toDecimal(data.investmentPeriodEndsAt);
 
-        setStakePeriodStakeEndsAt(
-          (timestamp - Math.floor(new Date().getTime() / 1000.0)) / 86400
-        );
-      });
+
 
     contract
       .currentPoolAmount()
