@@ -31,13 +31,13 @@ export default function DividendToken({ tokenData, contract }) {
       </span>
 
       <span className="claimableAt">
-        {tokenData.claimableAt <= 0 ? "0" : (tokenData.claimableAt * 60).toFixed(3)} mins left
+        {tokenData.claimableAt >= 100000000 ? "0" : (tokenData.claimableAt * 60).toFixed(3)} mins left
       </span>
         <Button
-        disabled={tokenData.claimableAt <= 0 ? isClaimable : !isClaimable}
+        disabled={tokenData.claimableAt >= 100000000 ? isClaimable : !isClaimable}
         onClick={onClaim}
       >
-        Please Do Not Use This Button. Contact Admin
+        Please contact Dev.
       </Button>
 
     </span>
