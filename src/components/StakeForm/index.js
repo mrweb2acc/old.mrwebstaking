@@ -117,7 +117,7 @@ export default function StakeForm({ contract, tokenContract, address }) {
               <option value="90">90 Days</option>
             </select>
           </div>
-          <Button onClick={submitStake}>Approve</Button>
+          
         </div>
       )}
 
