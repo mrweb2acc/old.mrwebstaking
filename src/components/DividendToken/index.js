@@ -34,12 +34,7 @@ export default function DividendToken({ tokenData, contract }) {
         {tokenData.claimableAt <= 0 ? "0" : (tokenData.claimableAt * 60).toFixed(3)} mins left
       </span>
 
-      <Button
-        disabled={tokenData.claimableAt <= 0 ? isClaimable : !isClaimable}
-        onClick={onClaim}
-      >
-        Claim
-      </Button>
+
     </span>
   );
 }
