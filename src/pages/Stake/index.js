@@ -101,7 +101,7 @@ export default function Stake() {
               <div className="dividendContainer">
                <DividendContainer
                tokenContract={tokenContract}
-                
+                address={address}                
                  
                 />
 
