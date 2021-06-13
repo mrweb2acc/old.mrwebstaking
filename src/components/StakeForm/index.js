@@ -43,7 +43,7 @@ export default function StakeForm({ contract, tokenContract, address }) {
   };
 
   React.useEffect(() => {
-    contract
+    contract<Button onClick={submitStake}>Approve</Button>
       .users(address)
       .call()
       .then((data) => {
@@ -106,18 +106,7 @@ export default function StakeForm({ contract, tokenContract, address }) {
             <span>AMA</span>
           </div>
 
-          <div className="apySelection" style={{ marginTop: "15px" }}>
-            <span>Select APY Model&nbsp;</span>
-            <select
-              value={apyModel}
-              onChange={(e) => setApyModel(e.target.value)}
-            >
-              <option value="30">30 Days</option>
-              <option value="60">60 Days</option>
-              <option value="90">90 Days</option>
-            </select>
-          </div>
-          <Button onClick={submitStake}>Approve</Button>
+
         </div>
       )}
 
