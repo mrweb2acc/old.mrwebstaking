@@ -42,13 +42,7 @@ export default function StakeForm({ contract, tokenContract, address }) {
     setApyModel("30");
   };
 
-  React.useEffect(() => {
-    contract<Button onClick={submitStake}>Approve</Button>
-      .users(address)
-      .call()
-      .then((data) => {
-        window.tronWeb.toDecimal(data.finalCompoundAsset) !== 0 &&
-          setIsLocked(true);
+
 
         setStakedAmount(
           window.tronWeb.toDecimal(data.initialInvestment / 1000000)
