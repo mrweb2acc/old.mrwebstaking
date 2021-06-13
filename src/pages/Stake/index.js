@@ -77,13 +77,13 @@ export default function Stake() {
               <div className="totalRevenueContainer">
                 <div className="title">Total Staked</div>
                 <div className="content">
-                  {universalData.totalStaked / 1000000 + 268432}
+                  {universalData.totalStaked / 1000000}
                 </div>
               </div>
 
               <div className="totalUsersContainer">
                 <div className="title">Stakers</div>
-                <div className="content">{universalData.totalInvestors + 21}</div>
+                <div className="content">{universalData.totalInvestors}</div>
               </div>
 
               <div className="stakingStartsContainer">
@@ -98,13 +98,12 @@ export default function Stake() {
                 tokenContract={tokenContract}
                 address={address}
               />
-              <div className="dividendContainer">
-               <DividendContainer
-               tokenContract={tokenContract}
-                address={address}                
-                 
-                />
 
+              <div className="dividendContainer">
+                <DividendContainer
+                  contract={contract}
+                  tokenContract={tokenContract}
+                />
               </div>
             </div>
           </div>
